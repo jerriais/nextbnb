@@ -182,14 +182,17 @@ module.exports = JSON.parse("[{\"picture\":\"/img/houses/house1.jpg\",\"type\":\
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _houses_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./houses.json */ "./pages/houses.json");
-var _houses_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./houses.json */ "./pages/houses.json", 1);
-/* harmony import */ var _components_House__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/House */ "./components/House.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _houses_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./houses.json */ "./pages/houses.json");
+var _houses_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./houses.json */ "./pages/houses.json", 1);
+/* harmony import */ var _components_House__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/House */ "./components/House.js");
 var _jsxFileName = "/Users/matt/dev/git/nextbnb/pages/index.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -197,6 +200,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 const Index = () => __jsx("div", {
+  className: "jsx-1222751142",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -204,6 +208,7 @@ const Index = () => __jsx("div", {
     columnNumber: 5
   }
 }, __jsx("h2", {
+  className: "jsx-1222751142",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -211,15 +216,15 @@ const Index = () => __jsx("div", {
     columnNumber: 9
   }
 }, "Places to stay"), __jsx("div", {
-  className: "houses",
+  className: "jsx-1222751142" + " " + 'houses',
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7,
     columnNumber: 9
   }
-}, _houses_json__WEBPACK_IMPORTED_MODULE_1__.map((house, index) => {
-  return __jsx(_components_House__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
+}, _houses_json__WEBPACK_IMPORTED_MODULE_2__.map((house, index) => {
+  return __jsx(_components_House__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({
     key: index
   }, house, {
     __self: undefined,
@@ -229,7 +234,10 @@ const Index = () => __jsx("div", {
       columnNumber: 24
     }
   }));
-})));
+})), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  id: "1222751142",
+  __self: undefined
+}, ".houses.jsx-1222751142{display:grid;grid-template-columns:50% 50%;grid-template-rows:300px 300px;grid-gap:40px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tYXR0L2Rldi9naXQvbmV4dGJuYi9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFZcUIsQUFHOEIsYUFDaUIsOEJBQ0MsK0JBQ2pCLGNBQ2xCIiwiZmlsZSI6Ii9Vc2Vycy9tYXR0L2Rldi9naXQvbmV4dGJuYi9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBob3VzZXMgZnJvbSAnLi9ob3VzZXMuanNvbidcbmltcG9ydCBIb3VzZSBmcm9tICcuLi9jb21wb25lbnRzL0hvdXNlJ1xuXG5jb25zdCBJbmRleCA9ICgpID0+IChcbiAgICA8ZGl2PlxuICAgICAgICA8aDI+UGxhY2VzIHRvIHN0YXk8L2gyPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT0naG91c2VzJz5cbiAgICAgICAgICAgIHtob3VzZXMubWFwKChob3VzZSwgaW5kZXgpID0+IHtcbiAgICAgICAgICAgICAgICByZXR1cm4gPEhvdXNlIGtleT17aW5kZXh9IHsuLi5ob3VzZX0gLz5cbiAgICAgICAgICAgIH0pfVxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICA8c3R5bGUganN4PiB7YFxuICAgICAgICAgICAuaG91c2VzIHtcbiAgICAgICAgICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICAgICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogNTAlIDUwJTtcbiAgICAgICAgICAgICAgICBncmlkLXRlbXBsYXRlLXJvd3M6IDMwMHB4IDMwMHB4O1xuICAgICAgICAgICAgICAgIGdyaWQtZ2FwOiA0MHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICBgfVxuXG4gICAgICAgIDwvc3R5bGU+XG4gICAgPC9kaXY+XG4pXG5cbmV4cG9ydCBkZWZhdWx0IEluZGV4XG4iXX0= */\n/*@ sourceURL=/Users/matt/dev/git/nextbnb/pages/index.js */"));
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
@@ -255,6 +263,17 @@ module.exports = __webpack_require__(/*! /Users/matt/dev/git/nextbnb/pages/index
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-jsx/style":
+/*!***********************************!*\
+  !*** external "styled-jsx/style" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-jsx/style");
 
 /***/ })
 
