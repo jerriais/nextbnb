@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
 const House = props => {
-    console.log (props)
+    console.log(props)
     return (
         <Link href='/houses/[id]' as={'/houses/' + props.id}>
-            <div>
-                <p><img src={props.picture} width='100%' alt='House Picture'/></p>
+            <a>
+                <img src={props.picture} width='100%' alt='House Picture' />
                 <p>{props.type} - {props.town}</p>
                 <p>
                     {props.title}
@@ -13,7 +13,7 @@ const House = props => {
                 <p>
                     {props.rating} ({props.reviewsCount})
                 </p>
-            </div>
+            </a>
         </Link>
     )
 }

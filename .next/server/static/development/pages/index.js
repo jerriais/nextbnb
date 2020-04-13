@@ -122,19 +122,12 @@ const House = props => {
       lineNumber: 6,
       columnNumber: 9
     }
-  }, __jsx("div", {
+  }, __jsx("a", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7,
       columnNumber: 13
-    }
-  }, __jsx("p", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 17
     }
   }, __jsx("img", {
     src: props.picture,
@@ -144,9 +137,9 @@ const House = props => {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
-      columnNumber: 20
+      columnNumber: 17
     }
-  })), __jsx("p", {
+  }), __jsx("p", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
