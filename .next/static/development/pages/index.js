@@ -55,7 +55,7 @@ var House = function House(props) {
       lineNumber: 9,
       columnNumber: 17
     }
-  }, props.type, " -  ", props.town), __jsx("p", {
+  }, props.type, " - ", props.town), __jsx("p", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
