@@ -1,13 +1,13 @@
-import houses from "../houses.json";
 import Head from 'next/head'
-import Layout from "../../components/Layout";
-import DayPickerInput from 'react-day-picker/DayPickerInput'
-import DateRangePicker from "../../components/DateRangePicker";
+import Layout from '../../components/Layout'
+import DateRangePicker from '../../components/DateRangePicker'
+
+import houses from '../houses.json'
 
 const House = props => (
     <Layout
         content={
-            <div className="container">
+            <div className='container'>
                 <Head>
                     <title>{props.house.title}</title>
                 </Head>
