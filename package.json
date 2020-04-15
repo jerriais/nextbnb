@@ -5,15 +5,17 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build":"next build",
+    "build": "next build",
     "start": "next start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "next": "^9.3.4",
     "react": "^16.13.1",
+    "react-day-picker": "^7.4.1",
     "react-dom": "^16.13.1"
   }
 }
