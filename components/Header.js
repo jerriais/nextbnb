@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import 'react-day-picker/lib/style.css'
 
 const Header = () => (
     <div className='nav-container'>
