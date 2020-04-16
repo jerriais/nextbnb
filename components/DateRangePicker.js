@@ -2,7 +2,8 @@ import DayPickerInput from 'react-day-picker/DayPickerInput'
 import 'react-day-picker/lib/style.css'
 import dateFnsFormat from 'date-fns/format'
 import dateFnsParse from 'date-fns/parse'
-import {useState} from 'react'
+import { useState } from 'react'
+import { DateUtils } from 'react-day-picker'
 
 const parseDate = (str, format, locale) => {
     const parsed =dateFnsParse (str, format, new Date(), {locale})
@@ -16,7 +17,7 @@ const format = 'dd MMM yyyy'
 
 export default () => {
     const [startDate, setStartDate] = useState(new Date())
-    const [endDate, setEndDate] = useState(new date())
+    const [endDate, setEndDate] = useState(new Date())
 
     return (
         <div className='date-range-picker-container'>
@@ -35,11 +36,29 @@ export default () => {
                         }
                     }
                 }}
+                onDayChange={day => {
+                    setStartDate(day)
+                }}
                 />
         </div>
         <div>
             <label>To:</label>
-            <DayPickerInput />
+            <DayPickerInput
+            format={format}
+            parseDate={parseDate}
+            formatDate={formatDate}
+            placeholder={`${dateFnsFormat(new Date(), format)}`}
+            dayPickerProps={{
+                modifiers: {
+                    disabled: {
+                        before: new Date()
+                    }
+                }
+            }}
+            onDayChange={day => {
+                setEndDate(day)
+            }}
+            />
         </div>
         <style jsx>{`
             .date-range-picker-container div {
