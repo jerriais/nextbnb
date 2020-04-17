@@ -5,6 +5,22 @@ import dateFnsParse from 'date-fns/parse'
 import { useState } from 'react'
 import { DateUtils } from 'react-day-picker'
 
+const today = new Date()
+const tomorrow = new Date(today)
+tomorrow.setDate(tomorrow.getDate()+1)
+
+const numberOfNightsBetweenDates = (startDate, endDate) => {
+    const start = new Date(startDate) //clone
+    const end = new Date(endDate) //clone
+    let dayCount = 0
+
+    while (end > start) {
+        daycount++
+        start.setDate(start.getDate()+1)
+    }
+    return dayCount
+}
+
 const parseDate = (str, format, locale) => {
     const parsed =dateFnsParse (str, format, new Date(), {locale})
     return DateUtils.isDate(parsed) ? parsed : null
@@ -38,6 +54,11 @@ export default () => {
                 }}
                 onDayChange={day => {
                     setStartDate(day)
+                    if (numberOfNightsBetweenDates(day, endDate) <1) {
+                        const newEndDate = new Date(day)
+                        newEndDate.setDate(newEndDate.getDate()+1)
+                        setEndDate(newEndDate)
+                    }
                 }}
                 />
         </div>
@@ -50,9 +71,12 @@ export default () => {
             placeholder={`${dateFnsFormat(new Date(), format)}`}
             dayPickerProps={{
                 modifiers: {
-                    disabled: {
-                        before: new Date()
-                    }
+                    disabled: [
+                        startDate,
+                        {
+                        before: startDate
+                        }
+                    ]
                 }
             }}
             onDayChange={day => {

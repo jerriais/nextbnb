@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import 'react-day-picker/lib/style.css'
+import 'react-day-picker/lib/style.css' //only imported here to prevent Link from not working
 
 const House = props => {
     return (
