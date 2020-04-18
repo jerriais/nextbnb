@@ -31,7 +31,7 @@ const formatDate =(date, format, locale) =>
 
 const format = 'dd MMM yyyy'
 
-export default () => {
+export default ({datesChanged}) => {
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date())
 
@@ -81,9 +81,11 @@ export default () => {
             }}
             onDayChange={day => {
                 setEndDate(day)
+                datesChanged(startDate, day)
             }}
             />
         </div>
+
         <style jsx>{`
             .date-range-picker-container div {
                 display: grid;
